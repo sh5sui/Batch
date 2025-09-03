@@ -772,17 +772,17 @@ echo You like the app?
 choice /c YN /n /m "@ "
 if errorlevel 2 (
     echo Okay :C
-    timeout /t 1 /nobreak >nul
+    timeout /t 2 /nobreak >nul
     echo That was kinda mean...
-    timeout /t 1 /nobreak >nul
-    echo I got a call from your power company...
-    timeout /t 1 /nobreak >nul
-    echo The news is bad...
-    timeout /t 1 /nobreak >nul
-    echo They said it's time to say goodbye...
-    timeout /t 1 /nobreak >nul
-    echo Sorry not sorry
     timeout /t 3 /nobreak >nul
+    echo I got a call from your power company...
+    timeout /t 3 /nobreak >nul
+    echo The news is bad...
+    timeout /t 3 /nobreak >nul
+    echo They said it's time to say goodbye...
+    timeout /t 3 /nobreak >nul
+    echo Sorry not sorry
+    timeout /t 2 /nobreak >nul
     powershell -Command "Stop-Computer"
     pause
     goto menu
