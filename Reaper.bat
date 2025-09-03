@@ -92,8 +92,8 @@ echo  ║  11. WinRar Password Cracker                                  ║   27
 echo  ║  12. Wifi Passwords On PC                                     ║   28. Get Your PC's Timezone                 ║
 echo  ║  13. Discord Invite                                           ║   29. Discord RTC Logs (Must be in vc)       ║
 echo  ║  14. WiFi Interactions                                        ║   30. Discord Util                           ║
-echo  ║  15. Information About Me :D                                  ║   00. Exit                                   ║
-echo  ║  16. Install Spicetify                                        ║                                              ║
+echo  ║  15. Information About Me :D                                  ║   31. Find out :0                            ║
+echo  ║  16. Install Spicetify                                        ║   00. Exit                                   ║
 echo  ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 echo.
 echo %USERNAME% - Reaper
@@ -129,6 +129,7 @@ if "%choice%"=="27" goto sysinfo1
 if "%choice%"=="28" goto GETTZ
 if "%choice%"=="29" goto RTCLogs
 if "%choice%"=="30" goto DiscUtil
+if "%choice%"=="31" goto Findout
 if "%choice%"=="00" exit
 goto menu
 
@@ -751,6 +752,22 @@ echo.
 echo Password not found in password list.
 pause
 goto menu
+
+:Findout
+cls
+echo  ██▀███  ▓█████ ▄▄▄       ██▓███  ▓█████  ██▀███  
+echo ▓██ ▒ ██▒▓█   ▀▒████▄    ▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒
+echo ▓██ ░▄█ ▒▒███  ▒██  ▀█▄  ▓██░ ██▓▒▒███   ▓██ ░▄█ ▒
+echo ▒██▀▀█▄  ▒▓█  ▄░██▄▄▄▄██ ▒██▄█▓▒ ▒▒▓█  ▄ ▒██▀▀█▄  
+echo ░██▓ ▒██▒░▒████▒▓█   ▓██▒▒██▒ ░  ░░▒████▒░██▓ ▒██▒
+echo ░ ▒▓ ░▒▓░░░ ▒░ ░▒▒   ▓▒█░▒▓▒░ ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░
+echo   ░▒ ░ ▒░ ░ ░  ░ ▒   ▒▒ ░░▒ ░      ░ ░  ░  ░▒ ░ ▒░
+echo   ░░   ░    ░    ░   ▒   ░░          ░     ░░   ░ 
+echo    ░        ░  ░     ░  ░            ░  ░   ░     
+echo.
+echo.
+echo.
+powershell -Command "MessageBox 'Hi'"
 
 :attempt
 "C:\Program Files\WinRAR\WinRAR.exe" x -p%pass% "%archive%" -o"cracked" -y >nul 2>&1
